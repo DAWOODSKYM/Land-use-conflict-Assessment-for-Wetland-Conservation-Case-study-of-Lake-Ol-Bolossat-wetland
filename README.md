@@ -14,7 +14,7 @@ Lake Ol’Bolossat wetland faces overwhelming threats due to ever-present land u
 uses in the landscape of the wetland include settlement and farming activities. The existence of urban land use and agriculture land use in the lake Ol’Bolossat 
 landscape is a crucial issue to the sustainability of the wetland. It is therefore important to study the historical, current and future trends of the landscape
 conditions, the interactions among the landscape classes and effects on the wetland landscape usin Earth observation data.
-# Research obectives
+# Research identification
 The main aim of this research is to assess the Spatial-Temporal changes in the land scape of the lake Ol’Bolossat wetland for information that could be used for its 
 management, conservation and rehabilitation.
 ## Research objectives
