@@ -1,7 +1,8 @@
 # Land-use-conflict-Assessment-for-Wetland-Conservation-Case-study-of-Lake-Ol-Bolossat-wetland
 ![image](https://user-images.githubusercontent.com/39521684/217616589-44babc84-1353-4519-8d3d-5ded31b9ca78.png)
 
-#Abstract
+# Abstract
+
 The Lake Ol’Bolossat wetland is one of the critical ecosystems that sustains the livelihood of the people living downstream of the Ewaso Nyiro river. Over the last 40 
 years the area around the wetland has seen rapid social and economic developments. These developments have brought with them serious alterations to the wetland 
 causing its fragmentation and loss of its biodiversity. The study utilizes landscape metrics of largest patch index, patch cohesion index and the splitting index to analyze the changing fragmentation conditions of patch distribution, connectedness and patch 
