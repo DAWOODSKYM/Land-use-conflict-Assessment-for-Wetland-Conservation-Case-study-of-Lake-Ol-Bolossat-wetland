@@ -1,0 +1,33 @@
+var StudyArea = ee.FeatureCollection("users/Dawoods_Kym/Wetland_extents_project");
+var dataset = ee.ImageCollection('UCSB-CHG/CHIRPS/PENTAD')
+                  .filter(ee.Filter.date('2000-02-01', '2020-05-31'))
+                  .filterBounds(StudyArea);
+var precipitation = dataset.select('precipitation');
+var precipitation = precipitation.mean().clip(StudyArea);
+var precipitationVis = {
+  min: 0.0,
+  max: 112.0,
+  palette: ['001137', '0aab1e', 'e7eb05', 'ff4a2d', 'e90000'],
+};
+print(ui.Chart.image.series(dataset,StudyArea,ee.Reducer.mean(),5000).setOptions
+({
+  title: "Lake Ol'Bollosat Precipitation Over Years",
+  trendlines: {
+     0: {color: 'CC0000'}
+   },
+  hAxis: {title: 'Years'},
+  vAxis:{title:'rainfall (mm/5 days)'}
+}));
+Map.centerObject(roi, 8);
+Map.addLayer(precipitation, precipitationVis, 'Precipitation');
+// Export.image.toDrive({
+//   image: precipitation,
+//   description: 'Rainfall_1990',
+//   folder: 'RS_APPS',
+//   fileNamePrefix: 'Rainfall_1990',
+//   region: StudyArea,
+//   fileFormat: 'GeoTIFF',
+  //formatOptions: {
+  //  cloudOptimized: true
+  //}
+// });

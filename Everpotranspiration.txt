@@ -1,0 +1,35 @@
+var StudyArea = ee.FeatureCollection("users/Dawoods_Kym/Wetland_extents_project");
+var dataset = ee.ImageCollection('MODIS/006/MOD16A2')
+                  .filter(ee.Filter.date('2019-12-01', '2020-05-31'))
+                  .filterBounds(StudyArea)
+                  .select('ET');
+var evapotranspiration = dataset.select('ET');
+var evapotranspiration = evapotranspiration.mean().clip(StudyArea);
+var evapotranspirationVis = {
+  min: 0.0,
+  max: 300.0,
+  palette: [
+    'ffffff', 'fcd163', '99b718', '66a000', '3e8601', '207401', '056201',
+    '004c00', '011301'
+  ],
+};
+print(ui.Chart.image.series(dataset,StudyArea,ee.Reducer.mean(),1000).setChartType('ScatterChart').setOptions
+({
+  title: "Lake Ol'Bollosat Landscape Everpotranspiration Over Years",
+  trendlines: {0: {color: 'CC0000'}},
+  hAxis: {title: 'Years'},
+  vAxis:{title:'Everpotranspiration (mm/5-day )'}
+}));
+Map.centerObject(roi, 8);
+Map.addLayer(evapotranspiration, evapotranspirationVis, 'Evapotranspiration');
+Export.image.toDrive({
+  image: evapotranspiration,
+  description: 'Everpotranspiration_2020',
+  folder: 'RS_APPS',
+  fileNamePrefix: 'EVT_2020',
+  region: StudyArea,
+  fileFormat: 'GeoTIFF',
+  //formatOptions: {
+  //  cloudOptimized: true
+  //}
+});
