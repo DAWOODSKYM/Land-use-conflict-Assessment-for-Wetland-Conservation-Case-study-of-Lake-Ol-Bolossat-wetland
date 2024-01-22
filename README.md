@@ -22,4 +22,5 @@ management, conservation and rehabilitation.
 2) To simulate the future (2030) fragmentation conditions of the Lake Ol’Bolossat wetland. 
 3) To identify general landscape areas and wetland areas most vulnerable to loss to other land uses
 ### Study area
-![image](https://user-images.githubusercontent.com/Results/StudyArea.png
+![image](https://github.com/DAWOODSKYM/Land-use-conflict-Assessment-for-Wetland-Conservation-Case-study-of-Lake-Ol-Bolossat-wetland/assets/39521684/12cf1e3c-45b7-48b5-a381-3299e99db553)
+
