@@ -21,3 +21,5 @@ management, conservation and rehabilitation.
 1) To investigate the land scape fragmentation conditions changes in the wetland ecosystem (2000 - 2020).
 2) To simulate the future (2030) fragmentation conditions of the Lake Ol’Bolossat wetland. 
 3) To identify general landscape areas and wetland areas most vulnerable to loss to other land uses
+### Study area
+![image](https://user-images.githubusercontent.com/Results/StudyArea.png
