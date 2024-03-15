@@ -1,5 +1,4 @@
 # Land-use-conflict-Assessment-for-Wetland-Conservation-Case-study-of-Lake-Ol-Bolossat-wetland
-![image](https://user-images.githubusercontent.com/39521684/217616589-44babc84-1353-4519-8d3d-5ded31b9ca78.png)
 
 # Abstract
 
